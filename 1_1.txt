@@ -1,0 +1,19 @@
+puzzleInput=
+total=0
+strungInput=str(puzzleInput)
+listedInput=[int(x) for x in strungInput]
+previousDigit=listedInput[-1]
+currentDigit=listedInput[0]
+if currentDigit==previousDigit:
+		total+=currentDigit
+		previousDigit=currentDigit
+else:
+    	previousDigit=currentDigit
+for i in range(1,len(listedInput)):
+		currentDigit=listedInput[i]
+		if currentDigit==previousDigit:
+				total+=currentDigit
+				previousDigit=currentDigit
+		else: 
+				previousDigit=currentDigit
+print total
