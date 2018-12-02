@@ -11,10 +11,9 @@ twoCount=0
 threeCount=0
 
 
-for i in range(0,len(inputList)): #for each item in the list
-    currID=inputList[i]
+for currID in inputList: #for each item in the list
     #and count the letters for each letters in the set
-    letterCounts = dict((letter, currID.count(letter))for letter in set(currID))
+    letterCounts = dict((letter, currID.count(letter))for letter in currID)
         
 #if counts include 2 and 3, they both get one
     if 2 in letterCounts.values() and 3 in letterCounts.values():
